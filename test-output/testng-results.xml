@@ -1,100 +1,346 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results retried="1" ignored="0" total="9" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-29T01:39:21 IST" name="Default suite" finished-at="2025-05-29T01:39:55 IST" duration-ms="33762">
+  <suite started-at="2025-06-15T23:46:14 IST" name="Amazon website Automation" finished-at="2025-06-15T23:48:17 IST" duration-ms="123668">
     <groups>
+      <group name="Regression">
+        <method signature="SignInPageTest.SignInwith_ValidCredentials()[pri:1, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" name="SignInwith_ValidCredentials" class="com.amazon.qa.tests.SignInPageTest"/>
+      </group> <!-- Regression -->
     </groups>
-    <test started-at="2025-05-29T01:39:21 IST" name="Default test" finished-at="2025-05-29T01:39:55 IST" duration-ms="33762">
+    <test started-at="2025-06-15T23:46:14 IST" name="Amazon Test Case Execution" finished-at="2025-06-15T23:48:17 IST" duration-ms="123668">
+      <class name="com.amazon.qa.tests.HomePageTest">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:com.amazon.qa.tests.HomePageTest@47c81abf]" started-at="2025-06-15T23:46:14 IST" name="LaunchApplication" finished-at="2025-06-15T23:46:21 IST" duration-ms="7384" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="CaptureFielsInDigitalContent()[pri:0, instance:com.amazon.qa.tests.HomePageTest@47c81abf]" started-at="2025-06-15T23:46:21 IST" name="CaptureFielsInDigitalContent" finished-at="2025-06-15T23:46:35 IST" duration-ms="14008" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CaptureFielsInDigitalContent -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.tests.HomePageTest@47c81abf]" started-at="2025-06-15T23:46:35 IST" name="tearDown" finished-at="2025-06-15T23:46:35 IST" duration-ms="205" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:com.amazon.qa.tests.HomePageTest@47c81abf]" started-at="2025-06-15T23:47:34 IST" name="LaunchApplication" finished-at="2025-06-15T23:47:40 IST" duration-ms="5982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="test2()[pri:0, instance:com.amazon.qa.tests.HomePageTest@47c81abf]" started-at="2025-06-15T23:47:40 IST" name="test2" finished-at="2025-06-15T23:48:05 IST" duration-ms="25054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.tests.HomePageTest@47c81abf]" started-at="2025-06-15T23:48:05 IST" name="tearDown" finished-at="2025-06-15T23:48:05 IST" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.amazon.qa.tests.HomePageTest -->
       <class name="com.amazon.qa.tests.SignInPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@206a70ef]" started-at="2025-05-29T01:39:22 IST" name="setUp" finished-at="2025-05-29T01:39:31 IST" duration-ms="9489" status="PASS">
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:46:37 IST" name="LaunchApplication" finished-at="2025-06-15T23:46:39 IST" duration-ms="2095" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="LogTestwith_InValidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amazon.qa.tests.SignInPageTest@206a70ef]" started-at="2025-05-29T01:39:31 IST" name="LogTestwith_InValidCredentials" data-provider="FetchDataFromExcel" finished-at="2025-05-29T01:39:34 IST" duration-ms="3190" status="PASS">
+        </test-method> <!-- LaunchApplication -->
+        <test-method retried="true" signature="SignInwith_InValidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:46:39 IST" name="SignInwith_InValidCredentials" data-provider="getTestDataFromExcel" finished-at="2025-06-15T23:46:44 IST" duration-ms="5091" status="SKIP">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Abhishek]]>
+                <![CDATA[70311333]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Password1]]>
+                <![CDATA[Invalid mobile number]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[Invalid mobile number]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.json.JsonException">
+            <message>
+              <![CDATA[java.lang.reflect.InvocationTargetException
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f36a63dd1098efad10fbfe2d384eedfd, actions {actions=[org.openqa.selenium.interactions.Sequence@ab38196]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\ABHISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63194/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f36a63dd1098efad10fbfe2d384eedfd]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f36a63dd1098efad10fbfe2d384eedfd, actions {actions=[org.openqa.selenium.interactions.Sequence@ab38196]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\ABHISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63194/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f36a63dd1098efad10fbfe2d384eedfd
+at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:520)
+at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:182)
+at org.openqa.selenium.json.JsonOutput.write0(JsonOutput.java:409)
+at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:204)
+at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:204)
+at org.openqa.selenium.json.JsonOutput.write0(JsonOutput.java:409)
+at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:222)
+at java.base/java.util.Map.forEach(Map.java:733)
+at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:217)
+at org.openqa.selenium.json.JsonOutput.write0(JsonOutput.java:409)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:400)
+at org.openqa.selenium.json.Json.toJson(Json.java:133)
+at org.openqa.selenium.json.Json.toJson(Json.java:119)
+at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:236)
+at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:109)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:203)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:630)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:616)
+at com.amazon.qa.pages.HomePage.NavigateTo_SignInPage(HomePage.java:71)
+at com.amazon.qa.tests.SignInPageTest.SignInwith_InValidCredentials(SignInPageTest.java:60)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:431)
+at org.openqa.selenium.json.Json.toJson(Json.java:131)
+... 31 more
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:118)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:516)
+... 52 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@aria-label='Expand Account and Lists']"}
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f36a63dd1098efad10fbfe2d384eedfd, findElement {value=//button[@aria-label='Expand Account and Lists'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 136.0.7103.113 (76fa3c17824..., userDataDir: C:\Users\ABHISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63194}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63194/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f36a63dd1098efad10fbfe2d384eedfd
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.getWrappedElement(Unknown Source)
+at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:262)
+at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:211)
+at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:74)
+at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:83)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+... 54 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.json.JsonException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignInwith_InValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:46:44 IST" name="tearDown" finished-at="2025-06-15T23:46:44 IST" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:46:44 IST" name="LaunchApplication" finished-at="2025-06-15T23:46:48 IST" duration-ms="4325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="SignInwith_InValidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:46:48 IST" name="SignInwith_InValidCredentials" data-provider="getTestDataFromExcel" finished-at="2025-06-15T23:46:54 IST" duration-ms="6187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[70311333]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Invalid mobile number]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid mobile number]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LogTestwith_InValidCredentials -->
-        <test-method is-config="true" signature="QuitBrowser()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@206a70ef]" started-at="2025-05-29T01:39:34 IST" name="QuitBrowser" finished-at="2025-05-29T01:39:35 IST" duration-ms="244" status="PASS">
+        </test-method> <!-- SignInwith_InValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:46:54 IST" name="tearDown" finished-at="2025-06-15T23:46:55 IST" duration-ms="275" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- QuitBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@206a70ef]" started-at="2025-05-29T01:39:35 IST" name="setUp" finished-at="2025-05-29T01:39:40 IST" duration-ms="5317" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:46:55 IST" name="LaunchApplication" finished-at="2025-06-15T23:46:58 IST" duration-ms="3344" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="LogTestwith_InValidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amazon.qa.tests.SignInPageTest@206a70ef]" started-at="2025-05-29T01:39:40 IST" name="LogTestwith_InValidCredentials" data-provider="FetchDataFromExcel" finished-at="2025-05-29T01:39:43 IST" duration-ms="3227" status="PASS">
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="SignInwith_InValidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:46:58 IST" name="SignInwith_InValidCredentials" data-provider="getTestDataFromExcel" finished-at="2025-06-15T23:47:03 IST" duration-ms="5233" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chhaya]]>
+                <![CDATA[AK336@]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Password2]]>
+                <![CDATA[Invalid email address.]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[2]]>
+                <![CDATA[Invalid email address.]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LogTestwith_InValidCredentials -->
-        <test-method is-config="true" signature="QuitBrowser()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@206a70ef]" started-at="2025-05-29T01:39:43 IST" name="QuitBrowser" finished-at="2025-05-29T01:39:43 IST" duration-ms="205" status="PASS">
+        </test-method> <!-- SignInwith_InValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:47:03 IST" name="tearDown" finished-at="2025-06-15T23:47:04 IST" duration-ms="229" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- QuitBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@206a70ef]" started-at="2025-05-29T01:39:43 IST" name="setUp" finished-at="2025-05-29T01:39:51 IST" duration-ms="8085" status="PASS">
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:47:04 IST" name="LaunchApplication" finished-at="2025-06-15T23:47:07 IST" duration-ms="3655" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="LogTestwith_InValidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amazon.qa.tests.SignInPageTest@206a70ef]" started-at="2025-05-29T01:39:51 IST" name="LogTestwith_InValidCredentials" data-provider="FetchDataFromExcel" finished-at="2025-05-29T01:39:55 IST" duration-ms="3226" status="PASS">
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="SignInwith_InValidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:47:07 IST" name="SignInwith_InValidCredentials" data-provider="getTestDataFromExcel" finished-at="2025-06-15T23:47:12 IST" duration-ms="4517" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Ashish]]>
+                <![CDATA[!@$@#]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[Password3]]>
+                <![CDATA[Invalid email address.]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[3]]>
+                <![CDATA[Invalid email address.]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LogTestwith_InValidCredentials -->
-        <test-method is-config="true" signature="QuitBrowser()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@206a70ef]" started-at="2025-05-29T01:39:55 IST" name="QuitBrowser" finished-at="2025-05-29T01:39:55 IST" duration-ms="189" status="PASS">
+        </test-method> <!-- SignInwith_InValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:47:12 IST" name="tearDown" finished-at="2025-06-15T23:47:12 IST" duration-ms="201" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- QuitBrowser -->
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:47:12 IST" name="LaunchApplication" finished-at="2025-06-15T23:47:17 IST" duration-ms="5116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="SignInwith_InValidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:47:17 IST" name="SignInwith_InValidCredentials" data-provider="getTestDataFromExcel" finished-at="2025-06-15T23:47:22 IST" duration-ms="5031" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Err123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Invalid email address.]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Invalid email address.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignInwith_InValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:47:22 IST" name="tearDown" finished-at="2025-06-15T23:47:22 IST" duration-ms="266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:47:22 IST" name="LaunchApplication" finished-at="2025-06-15T23:47:29 IST" duration-ms="6471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="SignInwith_InValidCredentials(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:47:29 IST" name="SignInwith_InValidCredentials" data-provider="getTestDataFromExcel" finished-at="2025-06-15T23:47:33 IST" duration-ms="4521" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Enter your mobile number or email]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Enter your mobile number or email]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignInwith_InValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:47:33 IST" name="tearDown" finished-at="2025-06-15T23:47:34 IST" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="LaunchApplication()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:48:05 IST" name="LaunchApplication" finished-at="2025-06-15T23:48:09 IST" duration-ms="3503" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchApplication -->
+        <test-method signature="SignInwith_ValidCredentials()[pri:1, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:48:09 IST" name="SignInwith_ValidCredentials" finished-at="2025-06-15T23:48:17 IST" duration-ms="8400" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignInwith_ValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.amazon.qa.tests.SignInPageTest@1a5a4e19]" started-at="2025-06-15T23:48:17 IST" name="tearDown" finished-at="2025-06-15T23:48:17 IST" duration-ms="342" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.amazon.qa.tests.SignInPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Amazon Test Case Execution -->
+  </suite> <!-- Amazon website Automation -->
 </testng-results>

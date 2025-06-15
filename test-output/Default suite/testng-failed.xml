@@ -5,10 +5,9 @@
     <classes>
       <class name="com.amazon.qa.tests.SignInPageTest">
         <methods>
-          <include name="setUp"/>
-          <include name="InitializeBrowser"/>
-          <include name="LogTestwith_InValidCredentials"/>
-          <include name="QuitBrowser"/>
+          <include name="tearDown"/>
+          <include name="SignInwith_InValidCredentials"/>
+          <include name="LaunchApplication"/>
         </methods>
       </class> <!-- com.amazon.qa.tests.SignInPageTest -->
     </classes>
