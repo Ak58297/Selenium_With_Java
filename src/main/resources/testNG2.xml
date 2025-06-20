@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Amazon website Automation" parallel="tests"  >
+
+<listeners>
+	<listener class-name="com.amazon.qa.testComponents.Listeners"></listener>
+</listeners>
+
+    <test name="Amazon Test Case Execution">    
+        <classes>
+            <class name="com.amazon.qa.tests.HomePageTest"/>
+        </classes>
+    </test>
+</suite>

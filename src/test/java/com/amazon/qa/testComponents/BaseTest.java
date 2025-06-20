@@ -37,9 +37,11 @@ public abstract class BaseTest {
 		prop.load(fis);
 		
 		//System.out.println("Base initialization is called");
+		
+		String Browser= System.getProperty("Browser")!=null? System.getProperty("Browser"): prop.getProperty("Browser");
 
-		String browser=prop.getProperty("Browser");
-		switch(browser)
+	//	String browser=prop.getProperty("Browser");
+		switch(Browser)
 		{
 		case "Chrome":
 			System.setProperty("webdriver.chrome.driver", "D:\\WORK\\WorkSpace\\Driver\\chromedriver.exe");

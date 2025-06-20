@@ -24,7 +24,7 @@ public class HomePageTest extends BaseTest {
 	}
 
 	
-	@Test(retryAnalyzer=RetryTest.class)
+	@Test()
 	public void CaptureFielsInDigitalContent()  
 	{
 		hp.Login(prop.getProperty("Username"), prop.getProperty("Password"));

@@ -1,5 +1,6 @@
-D:\WORK\WorkSpace\AmazonTest\src\main\java\com\amazom\qa\base\Base.java
-D:\WORK\WorkSpace\AmazonTest\src\main\java\com\amazom\qa\utils\TestUtils.java
+D:\WORK\WorkSpace\AmazonTest\src\main\java\com\amazom\qa\utils\Extent_Report.java
+D:\WORK\WorkSpace\AmazonTest\src\main\java\com\amazom\qa\utils\TakesScreenshots.java
 D:\WORK\WorkSpace\AmazonTest\src\main\java\com\amazon\qa\pages\HomePage.java
 D:\WORK\WorkSpace\AmazonTest\src\main\java\com\amazon\qa\pages\SignInPage.java
-D:\WORK\WorkSpace\AmazonTest\src\main\java\com\amazon\qa\pages\SignUpPage.java
+D:\WORK\WorkSpace\AmazonTest\src\main\java\com\amazom\qa\utils\ExcelReader.java
+D:\WORK\WorkSpace\AmazonTest\src\main\java\com\amazom\qa\utils\TestUtils.java
