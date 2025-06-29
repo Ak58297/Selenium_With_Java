@@ -13,34 +13,41 @@ public class Listeners extends BaseTest implements ITestListener {
 
 	ExtentReports extent = Extent_Report.getReporter();
 	ExtentTest test;
-	ThreadLocal<ExtentTest> tl=new ThreadLocal<ExtentTest>();
+	//ExtentTest is the class in ExtentReports used to log individual test case steps and their outcomes—like pass, fail, skip, or info—into the final HTML report
+
+	ThreadLocal<ExtentTest> threadlocal=new ThreadLocal<ExtentTest>();
 
 	@Override
 	public void onTestStart(ITestResult result) {
 		
 		test= extent.createTest(result.getMethod().getMethodName());
-		tl.set(test); //unique thread id for each test
+		threadlocal.set(test); //unique thread id for each test
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		tl.get().log(Status.PASS, "Test Passed");
+		threadlocal.get().log(Status.PASS, "Test Passed");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		test.log(Status.FAIL, "Test Failed");
-		tl.get().fail(result.getThrowable()); //get the unique thread id
+		threadlocal.get().log(Status.FAIL, "Test Failed");
+		threadlocal.get().fail(result.getThrowable()); //get the unique thread id
 		
 		try {
 			driver=(WebDriver) result.getTestClass().getRealClass().getField("driver").get(result.getInstance());
 		}
-		catch(Exception e){e.printStackTrace();}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			
+		}
+		
 		//Screenshot
 		String FilePath=TakesScreenshot(result.getMethod().getMethodName(),driver);
 		
 		//Attach file path to takescreenshot
-		tl.get().addScreenCaptureFromPath(FilePath,result.getMethod().getMethodName());
+		threadlocal.get().addScreenCaptureFromPath(FilePath,result.getMethod().getMethodName());
 		
 	}
 
