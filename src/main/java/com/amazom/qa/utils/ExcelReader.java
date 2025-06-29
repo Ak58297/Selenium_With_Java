@@ -21,6 +21,7 @@ public class ExcelReader {
 	FileInputStream fis=new FileInputStream("D:\\WORK\\TestData\\TestDataQA.xlsx");
 	XSSFWorkbook workbook=new XSSFWorkbook(fis);
 	XSSFSheet sheet=workbook.getSheetAt(0);
+	
 	int rowCount=sheet.getPhysicalNumberOfRows();
 	XSSFRow rowfirst=sheet.getRow(0);
 	int coloumnCount=rowfirst.getLastCellNum();
@@ -32,10 +33,8 @@ public class ExcelReader {
 		rowfirst=sheet.getRow(i+1);
 		for(int j=0;j<coloumnCount;j++)
 		{
-			XSSFCell cell=rowfirst.getCell(j);
-			
+			XSSFCell cell=rowfirst.getCell(j);			
 			data[i][j]=format.formatCellValue(cell);
-
 		}
 	}
 	return data ;

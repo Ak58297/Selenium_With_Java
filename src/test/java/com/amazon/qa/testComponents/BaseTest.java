@@ -9,9 +9,11 @@ import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -23,7 +25,7 @@ import org.testng.annotations.BeforeMethod;
 public abstract class BaseTest {
 	
 	public static Properties prop;
-	public  static WebDriver driver;
+	public WebDriver driver;
 	static FileInputStream fis;
 	
 	public abstract void SetUp();
@@ -34,23 +36,24 @@ public abstract class BaseTest {
 	{
 		prop= new Properties();
 		fis =new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\amazom\\qa\\configurations\\config.properties");
-		prop.load(fis);
-		
+		prop.load(fis);		
 		//System.out.println("Base initialization is called");
-		
 		String Browser= System.getProperty("Browser")!=null? System.getProperty("Browser"): prop.getProperty("Browser");
-
+		
 	//	String browser=prop.getProperty("Browser");
 		switch(Browser)
 		{
 		case "Chrome":
+			ChromeOptions options=new ChromeOptions();
 			System.setProperty("webdriver.chrome.driver", "D:\\WORK\\WorkSpace\\Driver\\chromedriver.exe");
-			driver=new ChromeDriver();
+			options.addArguments("--headless");
+			driver=new ChromeDriver(options);
+			//driver.manage().window().setSize(new Dimension(1440,990));
 			break;
 			
 		case "Firefox":
 			System.setProperty("webdriver.gecko.driver", "D:\\WORK\\WorkSpace\\Driver\\geckodriver.exe");
-			driver=new FirefoxDriver();		
+			driver=new FirefoxDriver();	
 			break;
 		}
 		driver.manage().window().maximize();
@@ -89,8 +92,7 @@ public abstract class BaseTest {
 			FileUtils.copyFile(source, destination);
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
+		}		
 		return ScreenshotPath;
 	}
 	
