@@ -5,24 +5,14 @@
     <listener class-name="com.amazon.qa.testComponents.Listeners"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
-    <parameter name="InvalidMobileNumber" value="12345"/>
-    <parameter name="env" value="T2"/>
     <classes>
       <class name="com.amazon.qa.tests.SignInPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="SignInwith_InValidCredentials" invocation-numbers="1 2 3"/>
-          <include name="LaunchApplication"/>
           <include name="SignInwith_ValidCredentials"/>
+          <include name="LaunchApplication"/>
         </methods>
       </class> <!-- com.amazon.qa.tests.SignInPageTest -->
-      <class name="com.amazon.qa.tests.HomePageTest">
-        <methods>
-          <include name="CaptureFielsInDigitalContent"/>
-          <include name="tearDown"/>
-          <include name="LaunchApplication"/>
-        </methods>
-      </class> <!-- com.amazon.qa.tests.HomePageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,28 @@
+[
+	{
+		"Input":"70311333",
+		"ErrorMessageXpath":"Invalid mobile number",
+		"ExpectedErrorMessage":"Invalid mobile number"
+	}
+	,
+	{
+		"Input":"AK336@",
+		"ErrorMessageXpath":"Invalid email address.",
+		"ExpectedErrorMessage":"Invalid email address."
+	},
+	{
+		"Input":"!@$@#",
+		"ErrorMessageXpath":"Invalid email address.",
+		"ExpectedErrorMessage":"Invalid email address."
+	},
+	{
+			"Input":"Err123",
+			"ErrorMessageXpath":"Invalid email address.",
+			"ExpectedErrorMessage":"Invalid email address."
+	},
+	{
+				"Input":" ",
+				"ErrorMessageXpath":"Enter your mobile number or email",
+				"ExpectedErrorMessage":"Enter your mobile number or email"
+	}
+]
