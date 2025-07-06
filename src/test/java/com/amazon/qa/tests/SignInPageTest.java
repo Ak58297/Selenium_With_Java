@@ -1,20 +1,14 @@
 package com.amazon.qa.tests;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.AssertJUnit;
 import java.io.IOException;
-
-import org.apache.poi.ss.usermodel.DataFormatter;
-import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import java.util.HashMap;
 
 import com.amazom.qa.utils.ExcelReader;
+import com.amazom.qa.utils.JsonReader;
 import com.amazon.qa.pages.HomePage;
 import com.amazon.qa.pages.SignInPage;
 import com.amazon.qa.testComponents.BaseTest;
@@ -30,8 +24,8 @@ public class SignInPageTest extends BaseTest {
 	@Override
 	public void SetUp() {
 		
-		 si=new SignInPage(driver);
-		 hp=new HomePage(driver);
+		 si=new SignInPage(getDriver());
+		 hp=new HomePage(getDriver());
 	}
 	
 	@DataProvider
@@ -40,8 +34,11 @@ public class SignInPageTest extends BaseTest {
 	  return	 ExcelReader.getDataFromExcel();
 	}
 	
-	
-	
+	@DataProvider(name="getTestdataFromJson")
+	public Object[][] getTestdataFromJson() throws IOException
+	{
+		return JsonReader.getdatafromJson("testenv");	 	
+	}
 	
 	@Test(priority=1,groups="Regression", retryAnalyzer=RetryTest.class)
 	public void SignInwith_ValidCredentials()
@@ -49,6 +46,7 @@ public class SignInPageTest extends BaseTest {
 		hp.NavigateTo_SignInPage();		
 		si.EnterMobileNumberAndClickContinue(prop.getProperty("Username"));
 		si.EnterValidPasswordAndClickonContinue(prop.getProperty("Password"));	
+		Assert.fail("Failed purposly");
 	}
 	
 	
@@ -63,14 +61,15 @@ public class SignInPageTest extends BaseTest {
 		String ActualerrorMessage=si.GetTextForInValidNumber(ErrorMessage);	
 		AssertJUnit.assertEquals(ActualerrorMessage, ErrorMessage);
 	}
-
-
-
-
 	
-	
+	@Test(dataProvider="getTestdataFromJson", retryAnalyzer=RetryTest.class)
+	public void SignInwith_InValidCredentials2(HashMap<String,String> data) throws InterruptedException
+	{	
+		hp.NavigateTo_SignInPage();		
+		si.EnterMobileNumberAndClickContinue(data.get("Input"));
+		Thread.sleep(3000);
+		String ActualerrorMessage=si.GetTextForInValidNumber(data.get("ExpectedErrorMessage"));	
+		Assert.assertEquals(ActualerrorMessage, data.get("ExpectedErrorMessage"));
+	}
 
-
-	
-	
 }

@@ -1,5 +1,9 @@
 D:\WORK\WorkSpace\AmazonTest\src\test\java\com\amazon\qa\testComponents\Listeners.java
 D:\WORK\WorkSpace\AmazonTest\src\test\java\com\amazon\qa\tests\HomePageTest.java
+D:\WORK\WorkSpace\AmazonTest\src\test\java\stepDefinations\PaymentTest.java
+D:\WORK\WorkSpace\AmazonTest\src\test\java\CucumberOptions\CucumberRunner.java
 D:\WORK\WorkSpace\AmazonTest\src\test\java\com\amazon\qa\tests\SignInPageTest.java
+D:\WORK\WorkSpace\AmazonTest\src\test\java\stepDefinations\Hooks.java
 D:\WORK\WorkSpace\AmazonTest\src\test\java\com\amazon\qa\testComponents\BaseTest.java
 D:\WORK\WorkSpace\AmazonTest\src\test\java\com\amazon\qa\testComponents\RetryTest.java
+D:\WORK\WorkSpace\AmazonTest\src\test\java\stepDefinations\SignInTest.java

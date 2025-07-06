@@ -1,5 +1,0 @@
-# Created at 2025-06-19T23:20:46.530
-Boot Manifest-JAR contains absolute paths in classpath 'D:\WORK\WorkSpace\AmazonTest\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-

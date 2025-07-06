@@ -6,7 +6,7 @@
       <class name="com.amazon.qa.tests.SignInPageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="SignInwith_InValidCredentials"/>
+          <include name="SignInwith_InValidCredentials2" invocation-numbers="0 1 2 3 4"/>
           <include name="LaunchApplication"/>
         </methods>
       </class> <!-- com.amazon.qa.tests.SignInPageTest -->

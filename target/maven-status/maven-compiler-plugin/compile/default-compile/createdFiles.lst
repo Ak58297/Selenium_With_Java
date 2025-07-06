@@ -1,0 +1,8 @@
+com\amazom\qa\utils\JsonReader$2.class
+com\amazon\qa\pages\SignInPage.class
+com\amazom\qa\utils\TestUtils.class
+com\amazon\qa\pages\HomePage.class
+com\amazom\qa\utils\Extent_Report.class
+com\amazom\qa\utils\JsonReader.class
+com\amazom\qa\utils\JsonReader$1.class
+com\amazom\qa\utils\ExcelReader.class

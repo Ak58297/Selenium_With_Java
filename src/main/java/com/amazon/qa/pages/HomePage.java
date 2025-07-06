@@ -57,6 +57,9 @@ public class HomePage extends TestUtils {
 
 	@FindBy(xpath = "(//*[@class='a-icon a-icon-next'])[1]")
 	WebElement nextIcon;
+	
+	@FindBy(id="nav-logo-sprites")
+	WebElement AmazonLogo;
 
 	public void ValidateUserNameAfterClickingOn_AllHamburgerMenu(String UserName) {
 		All_HamburgerMenu.click();
@@ -67,11 +70,27 @@ public class HomePage extends TestUtils {
 	}
 
 	public void NavigateTo_SignInPage() {
-		actions = new Actions(driver);
-		actions.moveToElement(ExpandAccountAndList).build().perform();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		wait.until(ExpectedConditions.elementToBeClickable(SinInLink));
-		SinInLink.click();
+		
+		try {
+			wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+			wait.until(ExpectedConditions.visibilityOf(AmazonLogo));
+			}
+		catch(Exception e)
+		{
+			driver.navigate().refresh();	
+		}
+		finally
+		{
+			wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+			wait.until(ExpectedConditions.visibilityOf(AmazonLogo));
+			actions = new Actions(driver);
+			actions.moveToElement(ExpandAccountAndList).build().perform();
+			wait.until(ExpectedConditions.elementToBeClickable(SinInLink));
+			SinInLink.click();
+		}
+		
+		
+		
 	}
 
 	public void check() {

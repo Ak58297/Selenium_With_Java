@@ -19,7 +19,7 @@ public class HomePageTest extends BaseTest {
 	public void SetUp() 
 	{	
 	spt = new SignInPageTest();
-	hp=new HomePage(driver);
+	hp=new HomePage(getDriver());
 	
 	}
 

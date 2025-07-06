@@ -2,64 +2,57 @@
 import org.testng.annotations.AfterMethod;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.TakesScreenshot;
-
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 
 
 public abstract class BaseTest {
 	
-	public static Properties prop;
-	public WebDriver driver;
-	static FileInputStream fis;
+	protected static Properties prop;
+	private static WebDriver driver;
+	private static FileInputStream fis;
 	
 	public abstract void SetUp();
 	
 	
-	
-	public WebDriver InitializeDriver() throws IOException 
+	public void InitializeDriver() throws IOException
 	{
 		prop= new Properties();
 		fis =new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\com\\amazom\\qa\\configurations\\config.properties");
 		prop.load(fis);		
-		//System.out.println("Base initialization is called");
 		String Browser= System.getProperty("Browser")!=null? System.getProperty("Browser"): prop.getProperty("Browser");
-		
 	//	String browser=prop.getProperty("Browser");
 		switch(Browser)
 		{
 		case "Chrome":
 			ChromeOptions options=new ChromeOptions();
-			System.setProperty("webdriver.chrome.driver", "D:\\WORK\\WorkSpace\\Driver\\chromedriver.exe");
-			options.addArguments("--headless");
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("ChromeDriverPath"));
+			options.addArguments("--remote-allow-origins=*");
+		//	options.addArguments("--headless");
 			driver=new ChromeDriver(options);
 			//driver.manage().window().setSize(new Dimension(1440,990));
 			break;
 			
 		case "Firefox":
-			System.setProperty("webdriver.gecko.driver", "D:\\WORK\\WorkSpace\\Driver\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", prop.getProperty("GeckoDriverPath"));
 			driver=new FirefoxDriver();	
 			break;
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		return driver;
+		//return driver;
 		
 //		try {
 //			driver.findElement(By.xpath("//a[@onclick='window.location.reload()']")).isDisplayed();
@@ -75,9 +68,10 @@ public abstract class BaseTest {
 	@BeforeMethod
 	public void LaunchApplication() throws IOException
 	{
-		driver=InitializeDriver();
+		InitializeDriver();
+		//driver=getDriver();
 		SetUp();
-		driver.get(prop.getProperty("Url"));	
+		getDriver().get(prop.getProperty("Url"));	
 
 	}
 	
@@ -100,7 +94,11 @@ public abstract class BaseTest {
 	@AfterMethod
 	public void tearDown()
 	{
-		driver.close();
+		getDriver().quit();
 	}
 	
+	public static WebDriver getDriver()
+	{
+		return driver;
+	}
 }
